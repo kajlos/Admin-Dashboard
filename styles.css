@@ -12,10 +12,11 @@ body{
     display:grid;
     min-height: 100vh;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 1fr 4fr;
     grid-template-areas: "sidebar header"
                          "sidebar main";
 }
+
 .sidebar{
     background-color: rgb(28, 146, 210);
     color:white;
@@ -27,9 +28,17 @@ body{
 }
 .header{
     background-color: white;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    padding:10px 30px;
+    gap:20px;
 }
 .main{
     background-color: rgb(225, 231, 239);
+    padding:30px 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:20px;
 }
 .svg{
     filter: invert(100%);
@@ -43,4 +52,104 @@ body{
 }
 .sidebar div img{
     filter: invert(100%);
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+a:active{
+    color:blue;
+}
+.header > div{
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
+.profile{
+    justify-content: center;
+    gap:30px;
+}
+#search{
+    background-color: rgb(225, 231, 239);
+    border:none;
+    border-radius: 30px;
+    padding:8px 20px;
+    width: 80%;
+    min-width: 100px;
+}
+.small{
+    width:3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.big{
+    width:5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.bold{
+    font-weight: bold;
+}
+.btn{
+    background-color: rgb(28, 146, 210);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding:10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.mainRight{
+    display: grid;
+}
+#announcements > div, #trending > div{
+    background-color: white;
+    padding:20px;
+    border-radius: 10px;
+}
+hr{
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+.announcement{
+    padding:10px;
+}
+.trendingContainer{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.trendingContainer > div{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+}
+.trendingContainer > div  p{
+    color: grey;
+}
+.margin{
+    margin: 10px 0;
+}
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap:20px;
+}
+.text{
+    align-self: flex-start;
+}
+.images{
+    display: flex;
+    gap:15px;
+}
+.project{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:40px;
+    border-left: 8px solid orange;
 }
